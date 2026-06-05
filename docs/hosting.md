@@ -156,10 +156,15 @@ The program expects the following environment variables to run:
 
 It is recommended to create a `.env` file containing these variables then run the bot by pointing to that file.
 
-Using Node:
+Using Node on Windows:
 
 ```
 node --env-file=.env dist
+```
+Using Node on Linux:
+
+```
+node --env-file=.env /dist
 ```
 
 Using Docker:
@@ -167,6 +172,7 @@ Using Docker:
 ```
 docker run -d --env-file=.env NAME_OF_IMAGE
 ```
+It is required to have a `data` folder for the bot in order to start it with the node method. Make sure a directory called `data` exists in the parent folder by creating one. The directory should be empty until first launch.
 
 If you pulled the latest image provided in , `NAME_OF_IMAGE` would be `ghcr.io/that-hatter/scrapi-searcher:master`.
 
